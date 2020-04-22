@@ -1,4 +1,4 @@
-###一、引言
+### 一、引言
 　　这个系列也是自己对设计模式的一些学习笔记,希望对一些初学设计模式的人有所帮助的,在上一个专题中介绍了单例模式,在这个专题中继续为大家介绍一个比较容易理解的模式——简单工厂模式。
 
 ### 二、简单工厂模式的介绍
@@ -176,7 +176,7 @@
 　　介绍完了简单工厂模式之后，我学习的时候就像：.NET类库中是否有实现了简单工厂模式的类呢？后面确实有，.NET中System.Text.Encoding类就实现了简单工厂模式，该类中的GetEncoding(int codepage)就是工厂方法，具体的代码可以通过Reflector反编译工具进行查看，下面我也贴出该方法中部分代码：
 
 
-复制代码
+``` c#
 public static Encoding GetEncoding(int codepage)
 {
     Encoding unicode = null;
@@ -250,22 +250,22 @@ public static Encoding GetEncoding(int codepage)
         }
 }
     
-复制代码
+```
 
 Encoding类中实现的简单工厂模式是简单工厂模式的一种演变，此时简单工厂类由抽象产品角色扮演，然而.NET中Encoding类是如何解决简单工厂模式中存在的问题的呢（即如果新添加一种编码怎么办）？在GetEncoding方法里的switch函数有如下代码：
 
-复制代码
+``` C#
  switch (codepage)
      {
           .......
    default:
-                    unicode = GetEncodingCodePage(codepage);
-                    if (unicode == null)
-                    {
-                        unicode = GetEncodingRare(codepage); //当编码很少见时
-                    }
-                    break;
+   unicode = GetEncodingCodePage(codepage);
+   if (unicode == null)
+   {
+        unicode = GetEncodingRare(codepage); //当编码很少见时
+    }
+    break;
            ......
       }
-复制代码
+```
 　　在GetEncodingRare方法里有一些不常用编码的实例化代码，微软正式通过这个方法来解决新增加一种编码的问题。（其实也就是列出所有可能的编码情况），微软之所以以这样的方式来解决这个问题，可能是由于现在编码已经稳定了，添加新编码的可能性比较低，所以在.NET 4.5仍然未改动这部分代码。
