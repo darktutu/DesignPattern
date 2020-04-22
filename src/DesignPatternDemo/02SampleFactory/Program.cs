@@ -8,12 +8,12 @@ namespace _02SampleFactory
         {
 
             // 客户想点一个西红柿炒蛋        
-            Food food1 = FoodSimpleFactory.CreateFood("西红柿炒蛋");
-            food1.Print();
+            Food food = FoodSimpleFactory.CreateFood("西红柿炒蛋");
+            food.Print();
 
             // 客户想点一个土豆肉丝
-            Food food2 = FoodSimpleFactory.CreateFood("土豆肉丝");
-            food2.Print();
+            food = FoodSimpleFactory.CreateFood("土豆肉丝");
+            food.Print();
 
             Console.Read();
         }
