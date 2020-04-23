@@ -5,7 +5,8 @@ namespace _04AbstractFactory
     class Program
     {
         static void Main(string[] args)
-        {            // 南昌工厂制作南昌的鸭脖和鸭架
+        {            
+            // 南昌工厂制作南昌的鸭脖和鸭架
             AbstractFactory nanChangFactory = new NanChangFactory();
             YaBo nanChangYabo = nanChangFactory.CreateYaBo();
             nanChangYabo.Print();
