@@ -2,4 +2,7 @@
 
 工作很久，设计模式也总在听，但是了解的并不全面。这里把在博客园看到的一个不错的系列文章给备份下来，一边学一边记录。方便自己以后再来回顾。知识不整理，真的是一点点都忘记了。
 
-这是系列文章的![链接](https://www.cnblogs.com/zhili/p/DesignPatternSummery.html)
+这是系列文章的[链接](https://www.cnblogs.com/zhili/p/DesignPatternSummery.html) 
+又一个系列的 [链接](https://www.cnblogs.com/PatrickLiu/p/8287784.html)
+这两个里面都有参考，找到第二个的原因就是第一个里面有一些错误的点，第二个没有，所以两个系列对比这来，都给保留下来，看看懒癌的我什么时候能自己再梳理一下吧。
+本次主要是读了相关文章，把代码例子都弄出来。自己的理解，还需要写时日啊。
